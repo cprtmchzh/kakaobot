@@ -456,8 +456,8 @@ function response(room, msg, sender, isGroupChat, replier) {
 		var wak = data.select("body > div:nth-child(1) > h2").html().split("<br>");
 		var result = [];
 		result.push(wak+"\n");
-		for(var i = 0; i < 6; i++){
-			var isedol = ["아이네","징버거","릴파","주르르","고세구","비챤"];
+		for(var i = 0; i < 7; i++){
+			var isedol = ["우왁굳","아이네","징버거","릴파","주르르","고세구","비챤"];
 			var airInfo = data.select("#"+isedol[i]+" > div.card-flap.flap1 > div.card-description > p").html();
 			var airTitle = data.select("#"+isedol[i]+" > div.card-title > h2 > small").html()
 			if(airTitle.length != 0){
@@ -490,5 +490,6 @@ function response(room, msg, sender, isGroupChat, replier) {
 		var D_day = dday(dayData[0],dayData[1],dayData[2])
 		replier.reply("[ D-Day 정보 ]\n"+data.replace(/'.'/g,"-")+"\n"+D_day);
 	}
+	
 	
 }
